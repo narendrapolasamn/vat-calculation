@@ -8,26 +8,26 @@ export function getCalculation(vat:VatCalculationEntity){
       case 'net':
         const gross = (amount + (amount * percentage));
         vatResult = {
-         net:amount,
-         gross:gross,
-         vat:(gross -  amount),
+         net:roundOf(amount),
+         gross:roundOf(gross),
+         vat:roundOf(gross -  amount),
          percentage: percentage
        }
        break;
        case 'gross':
-         const netvalue = (amount - (amount * percentage));
+         const netvalue = amount/(1+percentage);
         vatResult = {
-         net:netvalue,
-         gross:amount,
-         vat:(amount - netvalue),
+         net:roundOf(netvalue),
+         gross:roundOf(amount),
+         vat:roundOf(amount - netvalue),
          percentage: percentage };
        break;
        case 'vat':
          const netAmount =(amount/percentage);
          vatResult = {
-           net:netAmount,
-           gross:netAmount +amount,
-           vat:vat.amount,
+           net:roundOf(netAmount),
+           gross:roundOf(netAmount + amount),
+           vat:roundOf(amount),
            percentage: percentage };
        break;
        default:
@@ -35,4 +35,8 @@ export function getCalculation(vat:VatCalculationEntity){
       
     }
     return vatResult;
+}
+
+export function roundOf(val:number){
+  return Math.round(val);
 }
