@@ -1,0 +1,53 @@
+@use '~@angular/material' as mat;
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
+@import '../../../styles/palettes';
+@import '../../../styles/themes';
+
+:host{
+    .container{
+        padding: 1rem;
+        .column{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            @include media(xs,sm){
+                justify-content: unset;
+            }
+           label{
+                    padding: 1rem;
+                    font-weight: 300;
+                    letter-spacing: .09em;
+                    
+                }
+                
+                mat-radio-group , mat-form-field{
+                    width: 52%;
+                    @include media(xs,sm){
+                      width: 90%;
+                    }
+                }
+           label.lblamount{
+            padding-right: 2.2rem;
+           }          
+            .calculate{
+                background-color: mat-color($mat-primary,medium);
+                border: 0.125rem solid mat-color($mat-primary,medium);
+                color:#ffffff;
+                border-radius:$radius-4;
+                margin: 2rem;
+            }
+            .calculate-disabled{
+                color: #6e7075;
+                background: #f5f5fa;
+                border: #f5f5f5;
+                pointer-events: none;
+            }
+            .amount{
+                color: red;
+                margin-top: 0rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+
+@use '~@angular/material' as mat;
+@import '../styles/mixins';
+@import '../styles/themes';
+
+:host .main{
+    .header{
+        display: flex;
+        justify-content: center;
+        font-weight: 100;
+        font-size: 1.5rem;
+    }
+}

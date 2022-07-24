@@ -1,0 +1,58 @@
+@import './breakpoints';
+
+@mixin xs {
+    @media only screen and (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (min-width: #{$screen-sm-min + 1}) and (max-width: #{$screen-md-min - 1}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-lg-min - 1}) {
+        @content;
+    }
+}
+
+
+@mixin lg {
+    @media only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-xl-min - 1}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media only screen and (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+@mixin media($keys...) {
+	@each $key in $keys {
+		@if ($key == xs) {
+			@include xs {
+			@content
+			}
+		} @else if ($key == sm) {
+			@include sm {
+			@content
+			}
+		} @else if ($key == md) {
+			@include md {
+			@content
+			}
+		} @else if ($key == lg) {
+			@include lg {
+			@content
+			}
+		} @else if ($key == xl) {
+			@include xl {
+			@content
+			}
+		}
+	}
+}

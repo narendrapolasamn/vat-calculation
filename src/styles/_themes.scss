@@ -1,0 +1,56 @@
+@use '~@angular/material' as mat;
+@import '~@angular/material/theming';
+@import 'palettes';
+@import 'variables';
+
+
+// Theme
+
+$mat-primary: mat-palette($mat-custom-blue-palette, medium, lighter, dark);
+$mat-accent: mat-palette($mat-custom-blue-palette, medium, lighter, dark);
+$mat-warn: mat-palette($mat-custom-red-palette, medium, lighter, dark);
+
+$mat-custom-app-theme: map-merge(mat-light-theme(mat-palette($mat-custom-blue-palette, medium, lighter, dark),
+    mat-palette($mat-custom-blue-palette, medium, lighter, dark),
+    mat-palette($mat-custom-red-palette, medium, lighter, dark)),
+  (light: mat-palette($mat-custom-grey-palette, medium, light, dark),
+    dark: mat-palette($mat-custom-grey-palette, dark, medium, black),
+    info: mat-palette($mat-custom-blue-palette, medium, lighter, dark),
+    danger: mat-palette($mat-custom-red-palette, medium, lighter, dark),
+    warning: mat-palette($mat-custom-yellow-palette, medium, lighter, dark),
+    success: mat-palette($mat-custom-green-palette, medium, lighter, dark),
+    foreground: (base: mat-color($mat-custom-grey-palette, black),
+      divider: mat-color($mat-custom-grey-palette, black, 0.12),
+      dividers: mat-color($mat-custom-grey-palette, black, 0.12),
+      disabled: mat-color($mat-custom-grey-palette, black, 0.38),
+      disabled-button: mat-color($mat-custom-grey-palette, black, 0.26),
+      disabled-text: mat-color($mat-custom-grey-palette, black, 0.38),
+      elevation: mat-color($mat-custom-grey-palette, black),
+      hint-text: mat-color($mat-custom-grey-palette, black, 0.38),
+      secondary-text: mat-color($mat-custom-grey-palette, dark),
+      icon: mat-color($mat-custom-grey-palette, black, 0.54),
+      icons: mat-color($mat-custom-grey-palette, black, 0.54),
+      text: mat-color($mat-custom-grey-palette, black, 0.87),
+      slider-min: mat-color($mat-custom-grey-palette, black, 0.87),
+      slider-off: mat-color($mat-custom-grey-palette, black, 0.26),
+      slider-off-active: mat-color($mat-custom-grey-palette, black, 0.38),
+    ),
+    background: (status-bar: mat-color($mat-custom-grey-palette, medium),
+      app-bar: mat-color($mat-custom-grey-palette, light),
+      background: mat-color($mat-custom-grey-palette, white),
+      hover: mat-color($mat-custom-grey-palette, black, 0.04),
+      card: mat-color($mat-custom-grey-palette, white),
+      dialog: mat-color($mat-custom-grey-palette, white),
+      disabled-button: mat-color($mat-custom-grey-palette, white, 0.12),
+      raised-button: mat-color($mat-custom-grey-palette, white),
+      focused-button: mat-color($mat-custom-grey-palette, white, 0.12),
+      selected-button: mat-color($mat-custom-grey-palette, medium),
+      selected-disabled-button: mat-color($mat-custom-grey-palette, medium),
+      disabled-button-toggle: mat-color($mat-custom-grey-palette, medium),
+      unselected-chip: mat-color($mat-custom-grey-palette, medium),
+      disabled-list-option: mat-color($mat-custom-grey-palette, medium),
+      tooltip: mat-color($mat-custom-grey-palette, dark),
+    ),
+    default-radius: $radius-1,
+    button-radius: 2.25rem,
+  ));

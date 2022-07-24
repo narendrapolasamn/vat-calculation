@@ -1,0 +1,335 @@
+/* stylelint-disable color-no-hex */
+$mat-custom-grey-palette: (
+  50: #FAFAFB,
+  100: #F1F1F2,
+  200: #DBDCDD,
+  300: #C4C5C7,
+  400: #9A9B9F,
+  500: #6E7075,
+  600: #626469,
+  700: #424447,
+  800: #323335,
+  900: #202122,
+  white: #fff,
+  lighter: #FAFAFB,
+  light: #f5f5fa,
+  medium: #DBDCDD,
+  dark: #6e7075,
+  black: #000,
+  contrast: (
+    white: #000,
+    lighter: #000,
+    light: #000,
+    medium: #000,
+    dark: #fff,
+    black: #fff,
+  ),
+);
+
+$mat-custom-blue-palette: (
+  50: #F3F7FE,
+  100: #E7F0FE,
+  200: #C2D9FC,
+  300: #9DC3F9,
+  400: #5495F5,
+  500: #0A68F1,
+  600: #095ED9,
+  700: #084EB5,
+  800: #063E91,
+  900: #053376,
+  lighter: #C2D9FC,
+  light: #9DC3F9,
+  medium: #0a68f1,
+  dark: #063E91,
+  darker: #053376,
+  contrast: (
+    lighter: #063E91,
+    light: #063E91,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-indigo-palette: (
+  50: #F6F4FF,
+  100: #EDE8FF,
+  200: #D2C6FF,
+  300: #B7A3FF,
+  400: #815FFF,
+  500: #4B1AFF,
+  600: #4417E6,
+  700: #3814BF,
+  800: #2D1099,
+  900: #250D7D,
+  lighter: #D2C6FF,
+  light: #B7A3FF,
+  medium: #4b1aff,
+  dark: #3814BF,
+  darker: #2D1099,
+  contrast: (
+    lighter: #2a0db7,
+    light: #13047a,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-fuchsia-palette: (
+  50: #FCF2FE,
+  100: #F8E6FC,
+  200: #EEBFF9,
+  300: #E499F5,
+  400: #CF4DED,
+  500: #BB00E5,
+  600: #A800CE,
+  700: #8C00AC,
+  800: #700089,
+  900: #5C0070,
+  lighter: #EEBFF9,
+  light: #E499F5,
+  medium: #bb00e5,
+  dark: #700089,
+  darker: #5C0070,
+  contrast: (
+    lighter: #6d00a4,
+    light: #38006d,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-purple-palette: (
+  50: #F7F6FA,
+  100: #F0ECF5,
+  200: #D8D0E5,
+  300: #C1B4D5,
+  400: #937CB6,
+  500: #644496,
+  600: #5A3D87,
+  700: #4B3371,
+  800: #3C295A,
+  900: #31214A,
+  lighter: #D8D0E5,
+  light: #C1B4D5,
+  medium: #644496,
+  dark: #4B3371,
+  darker: #3C295A,
+  contrast: (
+    lighter: #39226c,
+    light: #1a0d48,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-yellow-palette: (
+  50: #FFFBF4,
+  100: #FFF8E9,
+  200: #FFEDC9,
+  300: #FFE1A9,
+  400: #FFCB68,
+  500: #FFB527,
+  600: #E6A323,
+  700: #BF881D,
+  800: #996D17,
+  900: #7D5913,
+  lighter: #FFEDC9,
+  light: #FFE1A9,
+  medium: #ffb527,
+  dark: #BF881D,
+  darker: #996D17,
+  contrast: (
+    lighter: #b77313,
+    light: #7a4207,
+    medium: #000,
+    dark: #000,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-spring-green-palette: (
+  50: #F3FEF9,
+  100: #E7FDF3,
+  200: #C4FBE1,
+  300: #A0F8CF,
+  400: #59F3AA,
+  500: #12EE86,
+  600: #10D679,
+  700: #0EB365,
+  800: #0B8F50,
+  900: #097542,
+  lighter: #C4FBE1,
+  light: #A0F8CF,
+  medium: #12ee86,
+  dark: #0EB365,
+  darker: #0B8F50,
+  contrast: (
+    lighter: #09ab7f,
+    light: #03726a,
+    medium: #000,
+    dark: #000,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-green-palette: (
+  50: #F2F9F2,
+  100: #E6F3E6,
+  200: #BFE2BF,
+  300: #99D099,
+  400: #4DAD4D,
+  500: #008A00,
+  600: #007C00,
+  700: #006800,
+  800: #005300,
+  900: #004400,
+  lighter: #BFE2BF,
+  light: #99D099,
+  medium: #008a00,
+  dark: #006800,
+  darker: #005300,
+  contrast: (
+    lighter: #006311,
+    light: #004216,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-orange-palette: (
+  50: #FFF6F4,
+  100: #FFEEE9,
+  200: #FFD4C9,
+  300: #FFB9A8,
+  400: #FF8567,
+  500: #FF5126,
+  600: #E64922,
+  700: #BF3D1D,
+  800: #993117,
+  900: #7D2813,
+  lighter: #FFD4C9,
+  light: #FFB9A8,
+  medium: #ff5126,
+  dark: #BF3D1D,
+  darker: #993117,
+  contrast: (
+    lighter: #db331b,
+    light: #7a0712,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-red-palette: (
+  50: #FEF4F4,
+  100: #FCE9E9,
+  200: #F8C8C8,
+  300: #F4A7A7,
+  400: #EB6666,
+  500: #E32424,
+  600: #CC2020,
+  700: #AA1B1B,
+  800: #881616,
+  900: #6F1212,
+  lighter: #F8C8C8,
+  light: #F4A7A7,
+  medium: #e32424,
+  dark: #AA1B1B,
+  darker: #881616,
+  contrast: (
+    lighter: #a3122b,
+    light: #6c062a,
+    medium: #fff,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-azure-palette: (
+  lighter: #fafcfe,
+  light: #f0f5fc,
+  medium: #e4ebf8,
+  dark: #7284b2,
+  darker: #2b3b77,
+  contrast: (
+    lighter: #7284b2,
+    light: #2b3b77,
+    medium: #000,
+    dark: #fff,
+    darker: #fff,
+  ),
+);
+
+$mat-custom-data-indigo-palette: (
+  100: #DBD1FF,
+  200: #B7A3FF,
+  300: #7752FF,
+  400: #4714FF,
+  500: #2900BF,
+  600: #1E008C,
+  700: #14005C,
+);
+
+$mat-custom-data-fuchsia-palette: (
+  100: #F7D1FF,
+  200: #EEA3FF,
+  300: #DF52FF,
+  400: #D414FF,
+  500: #9D00BF,
+  600: #73008C,
+  700: #4B005C,
+);
+
+$mat-custom-data-light-blue-palette: (
+  100: #CCEEFF,
+  200: #8FDAFF,
+  300: #52C5FF,
+  400: #14B1FF,
+  500: #008FD6,
+  600: #006699,
+  700: #003D5C,
+);
+
+$mat-custom-data-light-orange-palette: (
+  100: #FFE3CC,
+  200: #FFC18F,
+  300: #FF9F52,
+  400: #FF7D14,
+  500: #D65F00,
+  600: #994400,
+  700: #5C2900,
+);
+
+$mat-custom-data-teal-palette: (
+  100: #D8F1E6,
+  200: #A9E3CB,
+  300: #79D3AA,
+  400: #41C58B,
+  500: #28A16E,
+  600: #23724F,
+  700: #154531,
+);
+
+$mat-custom-data-red-pink-palette: (
+  100: #FCCFDB,
+  200: #F89FB7,
+  300: #F56B90,
+  400: #F2376A,
+  500: #CF2452,
+  600: #9A2142,
+  700: #661D31,
+);
+
+$silver-400: #DBDCDD;
+$silver-500: #C4C5C7;
+$platinium-400: #FFE9BE;
+$platinium-500: #DBC291;
+$gold-400: #FEC34F;
+$gold-500: #DBA232;
+/* stylelint-enable */

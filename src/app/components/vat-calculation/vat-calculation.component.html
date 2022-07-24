@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="vatCalcForm">
+    <div class="column">
+        <label>Vate Rate: </label>
+       
+            <mat-radio-group aria-label="Select an option" formControlName="percentage" class="matRadio">
+                <mat-radio-button value="10">10%</mat-radio-button>
+                <mat-radio-button value="13">13%</mat-radio-button>
+                <mat-radio-button value="20">20%</mat-radio-button>
+            </mat-radio-group>
+      
+    </div>
+    <div class="column">
+        <label>Price Type: </label>
+        <mat-form-field appearance="outline" class="matSelect">
+            <mat-select formControlName="type">
+                <mat-option value="net">Net</mat-option>
+                <mat-option value="gross">Gross</mat-option>
+                <mat-option value="vat">Vat</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+    </div>
+    <div class="column">
+        <label class="lblamount">Amount: </label>
+        <mat-form-field appearance="outline" class="matAmount">
+            <input matInput placeholder="Enter Amount" formControlName="amount">
+        </mat-form-field>
+    </div>
+    <div class="column">
+        <div class="amount"
+            *ngIf="vatCalcForm.controls['amount']?.errors?.['pattern']"
+      >
+      missing or invalid (0 or non-numeric) VAT input
+      </div>
+    </div>
+    <div class="column">
+        <button mat-raised-button [ngClass]="{'calculate': !vatCalcForm.invalid,'calculate-disabled':vatCalcForm.invalid}" 
+        class="calculate" (click)="getCalculations()">Calculate</button>
+    </div>
+</form> 
+   <div class="column" *ngIf="vatCalc$ | async as vat">
+        <label class="">Gross Amount: </label> <div class="gross">{{vat?.gross}} </div> 
+        <label class="">Net Amount: </label> <div class="net">{{vat?.net}} </div> 
+        <label class="">Vat Amount: </label> <div class="vat">{{vat?.vat}} </div> 
+        <label class="">Vat Percetage: </label> <div class="percentage">{{vat?.percentage}} </div> 
+   </div>
+</div>
