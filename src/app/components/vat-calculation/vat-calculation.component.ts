@@ -28,19 +28,3 @@ export class VatCalculationComponent implements OnInit {
   }
   
 }
-
-// function easyRoundOf(value,decima){
-//   if(isNaN(value))
-//   {return 0;}
-//   else{
-//   decima=Math.pow(10,parseConv(decima));
-//   var rndvalus = Math.round(parseConv(value) * decima) / decima;
-//   if(isNaN(rndvalus)){return 0;}
-//   else{return rndvalus;}
-//   }
-//   }
-//   function parseConv(val)
-// {return parseFloat(val);}
-/// Net = G - (G*tax) vat = G-N
-/// Gross = Net + (net*tax)
-/// Net = vat/tax 

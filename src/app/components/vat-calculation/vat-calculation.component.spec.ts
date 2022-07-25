@@ -51,7 +51,7 @@ describe('VatCalculationComponent', () => {
   });
   it('should valid button text and click event',()=>{
       const getCalculations = jest.spyOn(component,'getCalculations');
-      const button = fixture.debugElement.query(By.css('.calculate'));
+      const button = fixture.debugElement.query(By.css('#calculate'));
       button.triggerEventHandler('click',null);
       fixture.detectChanges();
      

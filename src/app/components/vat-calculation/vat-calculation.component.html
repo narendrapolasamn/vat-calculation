@@ -31,11 +31,11 @@
         <div class="amount"
             *ngIf="vatCalcForm.controls['amount']?.errors?.['pattern']"
       >
-      missing or invalid (0 or non-numeric) VAT input
+          missing or invalid (0 or non-numeric) amount input
       </div>
     </div>
     <div class="column">
-        <button mat-raised-button [ngClass]="{'calculate': !vatCalcForm.invalid,'calculate-disabled':vatCalcForm.invalid}" 
+        <button mat-raised-button id="calculate" [ngClass]="{'calculate': !vatCalcForm.invalid,'calculate-disabled':vatCalcForm.invalid}" 
         class="calculate" (click)="getCalculations()">Calculate</button>
     </div>
 </form> 
